@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.footer-contenido {
+    display: flex; /* Alinea los elementos en columnas */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Para que en celulares se pongan uno abajo de otro */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-contenido h3, .footer-contenido h4 {
+    color: #008080; /* Nuestro color turquesa */
+    margin-bottom: 15px;
+}
+
+.footer-contenido p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.redes a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    border: 1px solid #008080;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    background-color: #008080;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
