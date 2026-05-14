@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Contacto - DJ Distribuidora Burgos</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>DJ CARNES</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Carnes.html">Carnes</a></li>
+                <li><a href="Salami.html">Embutidos</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="Coctactanos.html" class="active">Contacto</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="tienda.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Contacto -->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1><i class="fas fa-headset"></i> Contactanos</h1>
+            <p>Estamos aquí para atenderte y resolver tus dudas</p>
+        </div>
+    </section>
+
+    <!-- Sección de Información de Contacto -->
+    <section class="products-section">
+        <h2>Información de Contacto</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Teléfono</h3>
+                <p><a href="tel:8293670019">829 367 0019</a></p>
+                <p class="small">Disponible de 3:00 AM a 5:00 PM</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/18293671189" target="_blank">829 367 1189</a></p>
+                <p class="small">Respuestas rápidas y soporte 24/7</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p><a href="mailto:info@djcarnibus.com">info@djcarnibus.com</a></p>
+                <p class="small">Responderemos en menos de 24 horas</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Ubicación</h3>
+                <p>Calle Mella, Licey al Medio</p>
+                <p>Santiago, República Dominicana</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Horario</h3>
+                <p><strong>Martes a Viernes:</strong> 3:00 AM - 5:00 PM</p>
+                <p><strong>Domingos:</strong> Abierto (sin delivery)</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <h3>Redes Sociales</h3>
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <a href="https://www.facebook.com/djcarnibus" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/djcarnibus" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/18293671189" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                <p>DJ Distribuidora Burgos ofrece carnes y embutidos de la más alta calidad para tu mesa.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Teléfono: 829 367 0019</p>
+                <p>Email: info@djcarnibus.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociales</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/djcarnibus" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/djcarnibus" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://wa.me/18293671189" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Ubicación</h4>
+                <div id="map-footer"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DJ Distribuidora Burgos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- OpenStreetMap con Leaflet (sin API key) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script>
+        function initMap() {
+            const location = [19.4566, -70.6969];
+            const map = L.map('map-footer').setView(location, 15);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            const marker = L.marker(location).addTo(map)
+                .bindPopup('<strong>DJ Distribuidora Burgos</strong><br>Calle Mella, Licey al Medio<br>Santiago, República Dominicana<br><i class="fas fa-phone"></i> 829 367 0019')
+                .openPopup();
+        }
+        
+        window.addEventListener('load', initMap);
+    </script>
+
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(196, 30, 58, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            color: #C41E3A;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .contact-card a {
+            color: #C41E3A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .small {
+            font-size: 0.85rem;
+            color: #999 !important;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #C41E3A;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-icon:hover {
+            background: #a01830;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+            }
+
+            .contact-icon {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>
