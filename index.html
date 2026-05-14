@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>DJ Distribuidora Burgos - Carnes Premium</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>DJ CARNES</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="Carnes.html">Carnes</a></li>
+                <li><a href="Salami.html">Embutidos</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="Coctactanos.html">Contacto</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="tienda.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Carrito</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel Hero -->
+    <section class="carousel-hero">
+        <div class="carousel-container">
+            <button class="carousel-arrow prev-btn" onclick="moveSlide(-1)">‹</button>
+            
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="/img/descarga (2).jpg" alt="Embutidos Premium">
+                        <div class="slide-overlay">
+                            <h3>Embutidos Variados</h3>
+                            <p>RD$ 250.00</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/img/descarga (3).jpg" alt="Carnes Premium">
+                        <div class="slide-overlay">
+                            <h3>Carnes Premium</h3>
+                            <p>RD$ 320.00</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/img/descarga (6).jpg" alt="Selección Especial">
+                        <div class="slide-overlay">
+                            <h3>Selección Especial</h3>
+                            <p>RD$ 380.00</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="/img/descarga (4).jpg" alt="Productos DJ">
+                        <div class="slide-overlay">
+                            <h3>Productos DJ</h3>
+                            <p>RD$ 280.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-arrow next-btn" onclick="moveSlide(1)">›</button>
+        </div>
+        
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="setSlide(0)"></span>
+            <span class="indicator" onclick="setSlide(1)"></span>
+            <span class="indicator" onclick="setSlide(2)"></span>
+            <span class="indicator" onclick="setSlide(3)"></span>
+        </div>
+    </section>    <!-- Sección de Bienvenida -->
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1>DJ Distribuidora Burgos</h1>
+            <p>Carnes y embutidos de la más alta calidad</p>
+            <div class="contact-info">
+                <p class="phone"><i class="fas fa-phone"></i> Teléfono: 829 367 0019</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section class="products-section">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (2).jpg" alt="Embutidos Variados">
+                    <span class="product-badge">Destacado</span>
+                </div>
+                <div class="product-info">
+                    <h3>Embutidos Variados</h3>
+                    <p class="description">Selección de embutidos frescos y deliciosos</p>
+                    <p class="price">RD$ 250.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (3).jpg" alt="Carnes Premium">
+                    <span class="product-badge">Destacado</span>
+                </div>
+                <div class="product-info">
+                    <h3>Carnes Premium</h3>
+                    <p class="description">Cortes premium de la mejor calidad</p>
+                    <p class="price">RD$ 320.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (6).jpg" alt="Selección Especial">
+                    <span class="product-badge">Destacado</span>
+                </div>
+                <div class="product-info">
+                    <h3>Selección Especial</h3>
+                    <p class="description">Combinación especial de productos</p>
+                    <p class="price">RD$ 380.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (4).jpg" alt="Productos DJ">
+                    <span class="product-badge">Popular</span>
+                </div>
+                <div class="product-info">
+                    <h3>Productos DJ</h3>
+                    <p class="description">Variedad de productos exclusivos DJ</p>
+                    <p class="price">RD$ 280.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (7).jpg" alt="Carnes Frescas">
+                </div>
+                <div class="product-info">
+                    <h3>Carnes Frescas</h3>
+                    <p class="description">Carnes recién llegadas diariamente</p>
+                    <p class="price">RD$ 295.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (8).jpg" alt="Salami Artesanal">
+                </div>
+                <div class="product-info">
+                    <h3>Salami Artesanal</h3>
+                    <p class="description">Salami preparado de forma tradicional</p>
+                    <p class="price">RD$ 310.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (9).jpg" alt="Charcutería Mixta">
+                </div>
+                <div class="product-info">
+                    <h3>Charcutería Mixta</h3>
+                    <p class="description">Mix de embutidos y charcutería</p>
+                    <p class="price">RD$ 340.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/descarga (10).jpg" alt="Cortes Especiales">
+                </div>
+                <div class="product-info">
+                    <h3>Cortes Especiales</h3>
+                    <p class="description">Cortes personalizados a tu gusto</p>
+                    <p class="price">RD$ 360.00</p>
+                    <button class="btn-add">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre Nosotros</h4>
+                <p>DJ Distribuidora Burgos ofrece carnes y embutidos de la más alta calidad para tu mesa.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Teléfono: 829 367 0019</p>
+                <p>Email: info@djcarnibus.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociales</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/djcarnibus" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/djcarnibus" target="_blank" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://wa.me/18293671189" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Ubicación</h4>
+                <div id="map-footer"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DJ Distribuidora Burgos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- OpenStreetMap con Leaflet (sin API key) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script>
+        function initMap() {
+            const location = [19.4566, -70.6969];
+            const map = L.map('map-footer').setView(location, 15);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            const marker = L.marker(location).addTo(map)
+                .bindPopup('<strong>DJ Distribuidora Burgos</strong><br>Calle Mella, Licey al Medio<br>Santiago, República Dominicana<br><i class="fas fa-phone"></i> 829 367 0019')
+                .openPopup();
+        }
+        
+        window.addEventListener('load', initMap);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
